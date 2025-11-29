@@ -1,1 +1,118 @@
-/*Estilos principales*/
+:root {
+    /*paleta de colores*/
+    --bg: #091d03;
+    --branding: #dd9900;
+    --text: #faedd2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+header {
+    background: url(../assets/images/backgrounds/background-mobile.avif) center/cover no-repeat;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    color: var(--text)
+}
+
+.glass-panel {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #25251b;
+    padding: 0.3rem 0.7rem;
+    position: relative;
+    z-index: 20;
+}
+
+.logo-container:hover {
+    opacity: 0.8;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburguer-menu {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.hamburguer-menu span {
+    width: 38px;
+    border-bottom: 5px solid var(--branding);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburguer-menu.active span:nth-child(1) {
+    transform: translateY(6px) rotate(-33deg);
+}
+
+.hamburguer-menu.active span:nth-child(2) {
+    transform: translateY(-6px) rotate(33deg);
+}
+
+.mobile-navbar {
+    position: fixed;
+    top: 7.5dvh;
+    right: 0;
+    width: 100%;
+    height: 100dvh;
+    padding-top: 6rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.mobile-navbar.active {
+    transform: translateX(0);
+}
+
+.mobile-navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.mobile-navbar li {
+    margin: 10px 0;
+}
+
+.mobile-navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.mobile-navbar a:hover {
+    color: var(--branding);
+}
