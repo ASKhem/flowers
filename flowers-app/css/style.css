@@ -163,3 +163,91 @@ header {
     color: var(--branding-color);
     transform: scale(1.05);
 }
+
+
+/*===================== MAIN =====================*/
+main {
+    flex: 1;
+}
+
+.search {
+    padding-top: 20dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 2rem;
+    color: var(--primary-text);
+
+    background-image: url('../assets/images/backgrounds/background-mobile.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100dvh;
+}
+
+.search h2 {
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    width: 90%;
+    max-width: 600px;
+}
+
+.search-frame {
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: var(--border-radius-lg);
+    border: 2px solid rgba(61, 71, 31, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.search-frame:focus-within {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--branding-color);
+}
+
+.search-frame input {
+    border: none;
+    background: var(--input-bg);
+    backdrop-filter: blur(4px);
+    height: 55px;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    color: var(--primary-text);
+    transition: background-color 0.3s ease;
+}
+
+.search-frame input::placeholder {
+    color: rgba(61, 71, 31, 0.7);
+}
+
+.search-frame input:focus {
+    outline: none;
+    background-color: var(--input-focus-bg);
+}
+
+.search-frame button {
+    border: none;
+    background: var(--branding-color);
+    cursor: pointer;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.search-frame button:hover {
+    background-color: #c28600;
+}
+
+.search-frame button img {
+    width: 24px;
+    height: 24px;
+}
